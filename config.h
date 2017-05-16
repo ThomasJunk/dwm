@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -60,8 +62,15 @@ static const char *dmenucmd[] = { "/home/thomas/menu.sh", NULL};
 static const char *termcmd[]  = { "termite", NULL };
 static const char *lockcmd[]  = { "/home/thomas/lock.sh", NULL };
 
+static const char *volup[]         = { "pactl", "set-sink-volume", "0", "+5%", NULL };
+static const char *voldown[]       = { "pactl", "set-sink-volume", "0", "-5%", NULL };
+static const char *voltoggle[]     = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+    { 0,                            XF86XK_AudioRaiseVolume,  spawn,          {.v = volup } },
+    { 0,                            XF86XK_AudioLowerVolume,  spawn,          {.v = voldown } },
+    { 0,                            XF86XK_AudioMute,         spawn,          {.v = voltoggle } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_Pause,  spawn,          {.v = lockcmd } },

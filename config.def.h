@@ -9,7 +9,7 @@ static const unsigned int snap      = 16;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Cousine:size=10" };
-static const char dmenufont[]       = "Cousine:size=10";
+static const char dmenufont[]       = "Cousin:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -63,9 +63,9 @@ static const char *dmenucmd[] = { "/home/thomas/menu.sh", NULL};
 static const char *termcmd[]  = { "termite", NULL };
 static const char *lockcmd[]  = { "/home/thomas/lock.sh", NULL };
 
-static const char *volup[]         = { "pactl", "set-sink-volume", "0", "+5%", NULL };
-static const char *voldown[]       = { "pactl", "set-sink-volume", "0", "-5%", NULL };
-static const char *voltoggle[]     = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *volup[]         = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
+static const char *voldown[]       = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
+static const char *voltoggle[]     = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */

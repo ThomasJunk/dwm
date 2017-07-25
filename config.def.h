@@ -31,12 +31,13 @@ static const Rule rules[] = {
 	 */
 	/* class                     instance     title      tags mask     isfloating   monitor */
 	{ "Gimp",                      NULL,       NULL,       0,            1,           -1 },
-    { "Google-chrome",             NULL,       NULL,       1,            1,           -1 },
+	{ "Google-chrome",             NULL,       NULL,       1,            1,           -1 },
 	{ "Nautilus",                  NULL,       NULL,       1 << 4,       0,           -1 },
 	{ "Geary",                     NULL,       NULL,       1 << 6,       0,           -1 },
 	{ "Thunderbird",               NULL,       NULL,       1 << 6,       0,           -1 },
 	{ "jetbrains-pycharm-ce",      NULL,       NULL,       1 << 3,       0,           -1 },
 	{ "Atom",                      NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Emacs",                      NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
 /* layout(s) */
